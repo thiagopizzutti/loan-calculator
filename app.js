@@ -34,9 +34,9 @@ function calculateResults() {
         monthlyPayment.value = monthly.toFixed(2).toLocaleString('en-IN')
         totalPayment.value = (monthly * calculatePayments).toFixed(2).toLocaleString('en-IN')
         totalInterest.value = ((monthly * calculatePayments) - principal).toFixed(2).toLocaleString('en-IN')
-    } else {
-        showError("Please, check your numbers")
+
+        document.getElementById('results').style.display = 'block'
+        document.getElementById('loading').style.display = 'none'
+
     }
 }
-
-//Show Error
