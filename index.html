@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Loan Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <style>
+        #loading,
+        #results {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-dark"
+    style="color:rgb(0, 0, 0); background: linear-gradient(to left, rgb(76, 106, 133), rgb(44, 107, 128), rgb(41, 62, 73))">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5 bg-dark border-white">
+                    <h1 class="heading display-5 pb-3 bg-dark"
+                        style="color:lightblue">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    id="basic-addon1">$</span>
+                                <input type="text"
+                                    class="form-control"
+                                    id="amount-loan"
+                                    placeholder="Loan Amount"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    id="basic-addon1">%</span>
+                                <input type="text"
+                                    class="form-control"
+                                    id="interest"
+                                    placeholder="Interest"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text"
+                                class="form-control"
+                                id="years"
+                                placeholder="Years to Repay"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit"
+                                value="Calculate"
+                                class="btn border-white btn-block"
+                                style="color:lightblue;background: linear-gradient(to left, rgb(24, 29, 34),
+                                rgb(64, 75, 78), rgb(59, 60, 61))">
+                        </div>
+                    </form>
+                    <!-- LOADER GOES HERE -->
+                    <div id="loading">
+                        <img src="./img/loading.gif">
+                    </div>
+                    <!-- RESULTS -->
+                    <div>
+                        <h5 style="color:white;">Results</h5>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    id="basic-addon1">Montly Payment</span>
+                                <input type="number"
+                                    class="form-control"
+                                    id="monthly-payment"
+                                    disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    id="basic-addon1">Total Payment</span>
+                                <input type="number"
+                                    class="form-control"
+                                    id="total-payment"
+                                    disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text"
+                                    id="basic-addon1">Total Interest</span>
+                                <input type="number"
+                                    class="form-control"
+                                    id="total-interest"
+                                    disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
